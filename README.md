@@ -82,24 +82,30 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
                           
 ---
 
+
 ## 📊 Dashboard Preview
 
-This project includes visual analysis of key marketing metrics:
+This project delivers insights across three key analytical dimensions:
 
-### 📈 Conversion Trends
-Tracks monthly conversion rates and identifies peak and low-performing periods.
+---
+
+### 📈 Conversion Trends  
+Analyzes monthly conversion performance and identifies peak and low-performing periods.
+
 ![Conversion](./visuals/conversion-analysis.png)
 
 ---
 
-### 📊 Engagement Trends
-Analyzes user engagement (views, clicks) across time.
+### 📊 Engagement Trends  
+Tracks user interaction patterns (views, clicks) to understand engagement behavior.
+
 ![Engagement](./visuals/engagement-analysis.png)
 
 ---
 
-### 💬 Customer Sentiment Analysis
-Breakdown of positive, negative, and neutral customer feedback.
+### 💬 Customer Sentiment Analysis  
+Breakdown of customer feedback into positive, negative, and neutral sentiment categories.
+
 ![Sentiment](./visuals/sentiment-analysis.png)
 
 ## 📊 Key Insights  
