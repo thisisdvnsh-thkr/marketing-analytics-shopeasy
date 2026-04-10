@@ -48,12 +48,12 @@ Raw Data → SQL Processing → Python Analytics → Sentiment Analysis → Powe
 marketing-analytics-shopeasy/
 │
 ├── data/ # Raw and processed datasets
-├── sql/ # SQL scripts for analysis
-├── notebooks/ # Python analysis & NLP
-├── dashboard/ # Power BI dashboards
-├── visuals/ # Charts and screenshots
-├── requirements.txt
-└── README.md
+├── sql/ # SQL scripts for data extraction and analysis
+├── notebooks/ # Python notebooks (EDA, analysis, NLP)
+├── dashboard/ # Power BI dashboard files
+├── visuals/ # Charts, graphs, and screenshots
+├── requirements.txt # Project dependencies
+└── README.md # Project documentation
 
 
 ---
@@ -103,22 +103,28 @@ marketing-analytics-shopeasy/
 
 ---
 
-## ▶️ Getting Started  
+## ▶️ Getting Started
 
 ### 1. Clone the Repository
+```bash
 
 git clone https://github.com/thisisdvnsh-thkr/marketing-analytics-shopeasy.git
-
 cd marketing-analytics-shopeasy
 
+```
 ### 2. Install Dependencies
+
+```bash
 
 pip install -r requirements.txt
 
+```
 ### 3. Run Analysis
+```bash
 
 jupyter notebook
 
+```
 ---
 
 ## 🔮 Future Enhancements  
@@ -137,5 +143,4 @@ Aspiring Data Engineer | AI/ML
 
 ---
 
-## 📌 License  
-This project is for educational and portfolio purposes.
+
