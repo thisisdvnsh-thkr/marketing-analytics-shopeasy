@@ -55,34 +55,35 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 Raw Data (Customer, Sales, Reviews) ──┐
 ├──► SQL Data Extraction & Cleaning
 Marketing Campaign Data ──────────────┘ │
-▼
-Data Processing & Feature Engineering
-(Pandas, KPI Creation, Aggregations)
-│
-▼
-Exploratory Data Analysis (EDA)
-(Trend Analysis, Conversion Funnel, Patterns)
-│
-▼
-Sentiment Analysis (NLP)
-(TextBlob, Review Classification)
-│
-▼
-Business Metrics Computation
-(Conversion Rate, Engagement, ROI)
-│
-▼
-┌──────────────────────────────────────┐
-│ Power BI Dashboard                  │
-│ ─ Conversion Analysis               │
-│ ─ Engagement Metrics                │
-│ ─ Sentiment Insights                │
-└──────────────────────────────────────┘
-│
-▼
-Actionable Business Insights
-(Data-Driven Strategy & Optimization)
-
+                                        ▼
+                          Data Processing & Feature Engineering
+                          (Pandas, KPI Creation, Aggregations)
+                                        │
+                                        ▼
+                          Exploratory Data Analysis (EDA)
+                          (Trend Analysis, Conversion Funnel)
+                                        │
+                                        ▼
+                          Sentiment Analysis (NLP)
+                          (TextBlob, Review Classification)
+                                        │
+                                        ▼
+                          Business Metrics Computation
+                          (Conversion Rate, Engagement, ROI)
+                                        │
+                                        ▼
+                ┌──────────────────────────────────────┐
+                │ Power BI Dashboard                  │
+                │ ─ Conversion Analysis               │
+                │ ─ Engagement Metrics                │
+                │ ─ Sentiment Insights                │
+                └──────────────────────────────────────┘
+                                        │
+                                        ▼
+                          Actionable Business Insights
+                          (Strategy Optimization)
+> Structured as a modular analytics pipeline separating ingestion, processing, analysis, and visualization layers.
+                          
 ---
 
 ## 📊 Key Insights  
@@ -158,36 +159,37 @@ jupyter notebook
 
 marketing-analytics-shopeasy/
 │
-├── data/                  # Raw and processed datasets
+├── data/                     # Raw and processed datasets
 │   ├── raw/
 │   └── processed/
 │
-├── sql/                   # SQL scripts for extraction & analysis
+├── sql/                      # SQL scripts for analysis
 │   ├── data_cleaning.sql
 │   ├── campaign_analysis.sql
 │   └── customer_segmentation.sql
 │
-├── notebooks/             # Python notebooks (EDA + NLP)
+├── notebooks/                # Python notebooks (EDA + NLP)
 │   ├── eda.ipynb
 │   ├── sentiment_analysis.ipynb
 │   └── feature_engineering.ipynb
 │
-├── pipeline/              # ETL pipeline scripts
+├── pipeline/                 # ETL pipeline scripts
 │   ├── ingestion.py
 │   ├── transformation.py
 │   └── load.py
 │
-├── dashboard/             # Power BI dashboard files
+├── dashboard/                # Power BI dashboard
 │   └── shopeasy_dashboard.pbix
 │
-├── visuals/               # Charts and dashboard screenshots
+├── visuals/                  # Charts & screenshots
 │   ├── conversion.png
 │   ├── engagement.png
 │   └── sentiment.png
 │
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+├── requirements.txt
+└── README.md
 
+---
 
 ## 🔮 Future Enhancements  
 
