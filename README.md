@@ -84,14 +84,23 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 
 ## 📊 Dashboard Preview
 
-### 🔹 Conversion Analysis
-![Conversion Analysis](./visuals/conversion-analysis.png)
+This project includes visual analysis of key marketing metrics:
 
-### 🔹 Engagement Analysis
-![Engagement Analysis](./visuals/engagement-analysis.png)
+### 📈 Conversion Trends
+Tracks monthly conversion rates and identifies peak and low-performing periods.
+![Conversion](./visuals/conversion-analysis.png)
 
-### 🔹 Sentiment Analysis
-![Sentiment Analysis](./visuals/sentiment-analysis.png)
+---
+
+### 📊 Engagement Trends
+Analyzes user engagement (views, clicks) across time.
+![Engagement](./visuals/engagement-analysis.png)
+
+---
+
+### 💬 Customer Sentiment Analysis
+Breakdown of positive, negative, and neutral customer feedback.
+![Sentiment](./visuals/sentiment-analysis.png)
 
 ## 📊 Key Insights  
 
