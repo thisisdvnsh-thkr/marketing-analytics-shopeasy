@@ -52,21 +52,36 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 
 ## 🔄 System Workflow  
 
-Raw Data ──► SQL Processing ──► Data Cleaning
+Raw Data (Customer, Sales, Reviews) ──┐
+├──► SQL Data Extraction & Cleaning
+Marketing Campaign Data ──────────────┘ │
+▼
+Data Processing & Feature Engineering
+(Pandas, KPI Creation, Aggregations)
 │
 ▼
-Python Analysis
-(EDA + Feature Engineering)
+Exploratory Data Analysis (EDA)
+(Trend Analysis, Conversion Funnel, Patterns)
 │
 ▼
 Sentiment Analysis (NLP)
+(TextBlob, Review Classification)
 │
 ▼
-Power BI Dashboard
+Business Metrics Computation
+(Conversion Rate, Engagement, ROI)
 │
 ▼
-Business Insights & Decisions
-
+┌──────────────────────────────────────┐
+│ Power BI Dashboard                  │
+│ ─ Conversion Analysis               │
+│ ─ Engagement Metrics                │
+│ ─ Sentiment Insights                │
+└──────────────────────────────────────┘
+│
+▼
+Actionable Business Insights
+(Data-Driven Strategy & Optimization)
 
 ---
 
@@ -143,13 +158,35 @@ jupyter notebook
 
 marketing-analytics-shopeasy/
 │
-├── data/                 # Raw & processed datasets
-├── sql/                  # SQL queries for analysis
-├── notebooks/            # Python notebooks (EDA + NLP)
-├── dashboard/            # Power BI dashboards
-├── visuals/              # Charts and screenshots
-├── requirements.txt
-└── README.md
+├── data/                  # Raw and processed datasets
+│   ├── raw/
+│   └── processed/
+│
+├── sql/                   # SQL scripts for extraction & analysis
+│   ├── data_cleaning.sql
+│   ├── campaign_analysis.sql
+│   └── customer_segmentation.sql
+│
+├── notebooks/             # Python notebooks (EDA + NLP)
+│   ├── eda.ipynb
+│   ├── sentiment_analysis.ipynb
+│   └── feature_engineering.ipynb
+│
+├── pipeline/              # ETL pipeline scripts
+│   ├── ingestion.py
+│   ├── transformation.py
+│   └── load.py
+│
+├── dashboard/             # Power BI dashboard files
+│   └── shopeasy_dashboard.pbix
+│
+├── visuals/               # Charts and dashboard screenshots
+│   ├── conversion.png
+│   ├── engagement.png
+│   └── sentiment.png
+│
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
 
 
 ## 🔮 Future Enhancements  
