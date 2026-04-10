@@ -82,6 +82,17 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
                           
 ---
 
+## 📊 Dashboard Preview
+
+### 🔹 Conversion Analysis
+![Conversion Analysis](./visuals/conversion-analysis.png)
+
+### 🔹 Engagement Analysis
+![Engagement Analysis](./visuals/engagement-analysis.png)
+
+### 🔹 Sentiment Analysis
+![Sentiment Analysis](./visuals/sentiment-analysis.png)
+
 ## 📊 Key Insights  
 
 ### 🔹 Conversion Analysis  
