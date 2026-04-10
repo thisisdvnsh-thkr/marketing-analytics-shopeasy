@@ -53,31 +53,31 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 ## 🔄 System Workflow  
 
 ```
-Raw Data Sources (Customers, Sales, Reviews, Campaigns)
-              │
-          [ETL Pipeline]
-(pipeline/ingestion.py, transformation.py, load.py)
-              │
-              ▼
-   Data Warehouse / Processed Datasets
-          (data/processed/)
-              │
-  [Analysis / Notebooks Layer]
+  Raw Data Sources (Customers, Sales, Reviews, Campaigns)
+                           │
+                     [ETL Pipeline]
+      (pipeline/ingestion.py, transformation.py, load.py)
+                           │
+                           ▼
+           Data Warehouse / Processed Datasets
+                  (data/processed/)
+                           │
+                [Analysis / Notebooks Layer]
 (notebooks/eda.ipynb, sentiment_analysis.ipynb, feature_engineering.ipynb)
-              │
-              ▼
-   KPI Calculation, EDA, Sentiment/NLP Analysis
-              │
-            [Export]
-              │
-              ▼
-  Visualization / Dashboard
-  (dashboard/shopeasy_dashboard.pbix)
-              │
-              ▼
-Actionable Business Insights & Recommendations
+                           │
+                           ▼
+         KPI Calculation, EDA, Sentiment/NLP Analysis
+                           │
+                        [Export]
+                           │
+                           ▼
+                Visualization / Dashboard
+            (dashboard/shopeasy_dashboard.pbix)
+                           │
+                           ▼
+        Actionable Business Insights & Recommendations
 ```
-> Modular pipeline: ETL (pipeline/) → Data (data/) → Analysis (notebooks/) → Visualization (dashboard/) → Decision-Making
+> Modular pipeline: ETL (pipeline) → Data (data) → Analysis (notebooks) → Visualization (dashboard) → Decision-Making
 > Structured as a modular analytics pipeline separating ingestion, processing, analysis, and visualization layers.
                           
 ---
