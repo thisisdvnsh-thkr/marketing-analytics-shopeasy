@@ -52,44 +52,31 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 
 ## 🔄 System Workflow  
 
-       ┌────────────────────────────┐
-       │   Raw Data Sources         │
-       │  (Customer, Sales, Reviews,│
-       │   Marketing Campaigns)     │
-       └────────────┬───────────────┘
-                    │
-                [ETL Pipeline]
-           (pipeline/ingestion.py,
-           transformation.py, load.py)
-                    │
-                ▼
-          ┌───────────────────────┐
-          │  Data Warehouse /     │
-          │  Processed Datasets   │
-          │  (data/processed/)    │
-          └──────────┬────────────┘
-                    │
-          [Analysis/Notebook Layer]
-   (notebooks/eda.ipynb, sentiment_analysis.ipynb,
-         feature_engineering.ipynb)
-                   │
-                   ▼
-         ┌─────────────────────────┐
-         │ KPI Calculation, EDA,   │
-         │ Sentiment/NLP Analysis  │
-         └──────────┬──────────────┘
-                   │
-                 [Export]
-                   │
-                ▼
-      ┌────────────────────────────┐
-      │    Visualization/Dashboard │
-      │ (dashboard/shopeasy_dashboard.pbix) │
-      └────────────────────────────┘
-                   │
-                ▼
-    Actionable Business Insights & Recommendations
-
+```
+Raw Data Sources (Customers, Sales, Reviews, Campaigns)
+              │
+          [ETL Pipeline]
+(pipeline/ingestion.py, transformation.py, load.py)
+              │
+              ▼
+   Data Warehouse / Processed Datasets
+          (data/processed/)
+              │
+  [Analysis / Notebooks Layer]
+(notebooks/eda.ipynb, sentiment_analysis.ipynb, feature_engineering.ipynb)
+              │
+              ▼
+   KPI Calculation, EDA, Sentiment/NLP Analysis
+              │
+            [Export]
+              │
+              ▼
+  Visualization / Dashboard
+  (dashboard/shopeasy_dashboard.pbix)
+              │
+              ▼
+Actionable Business Insights & Recommendations
+```
 > Modular pipeline: ETL (pipeline/) → Data (data/) → Analysis (notebooks/) → Visualization (dashboard/) → Decision-Making
 > Structured as a modular analytics pipeline separating ingestion, processing, analysis, and visualization layers.
                           
@@ -165,38 +152,39 @@ jupyter notebook
 
 ---
 ## 🎞️ Project Structure
-
+```
 marketing-analytics-shopeasy/
 │
-├── data/                    # Data storage
-│   ├── raw/                 # Original, unprocessed datasets (CSV, XLSX, etc.)
-│   └── processed/           # Cleaned/transformed datasets ready for analysis
+├── data/                  # Data storage
+│   ├── raw/               # Original, unprocessed datasets (CSV, XLSX, etc.)
+│   └── processed/         # Cleaned/transformed datasets ready for analysis
 │
-├── sql/                     # SQL scripts for initial analysis/extraction
+├── sql/                   # SQL scripts for initial analysis/extraction
 │   ├── data_cleaning.sql
 │   ├── campaign_analysis.sql
 │   └── customer_segmentation.sql
 │
-├── pipeline/                # ETL scripts for ingestion, transformation & loading
+├── pipeline/              # ETL scripts for ingestion, transformation & loading
 │   ├── ingestion.py
 │   ├── transformation.py
 │   └── load.py
 │
-├── notebooks/               # Jupyter notebooks covering analysis & modeling
+├── notebooks/             # Jupyter notebooks for analysis & modeling
 │   ├── eda.ipynb                 # Exploratory Data Analysis
 │   ├── sentiment_analysis.ipynb  # NLP & Sentiment Analysis
 │   └── feature_engineering.ipynb # Feature engineering steps
 │
-├── dashboard/               # Power BI and other dashboard files
+├── dashboard/             # Power BI/dashboard files
 │   └── shopeasy_dashboard.pbix
 │
-├── visuals/                 # Charts, images, and screenshots for documentation
+├── visuals/               # Charts, images, screenshots for docs
 │   ├── conversion.png
 │   ├── engagement.png
 │   └── sentiment.png
 │
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
+```
 ---
 
 ## 🔮 Future Enhancements  
