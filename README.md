@@ -52,36 +52,45 @@ ShopEasy, an e-commerce platform, faced declining performance despite increasing
 
 ## 🔄 System Workflow  
 
-Raw Data (Customer, Sales, Reviews) ──┐
-├──► SQL Data Extraction & Cleaning
-Marketing Campaign Data ──────────────┘ │
-                                        ▼
-                          Data Processing & Feature Engineering
-                          (Pandas, KPI Creation, Aggregations)
-                                        │
-                                        ▼
-                          Exploratory Data Analysis (EDA)
-                          (Trend Analysis, Conversion Funnel)
-                                        │
-                                        ▼
-                          Sentiment Analysis (NLP)
-                          (TextBlob, Review Classification)
-                                        │
-                                        ▼
-                          Business Metrics Computation
-                          (Conversion Rate, Engagement, ROI)
-                                        │
-                                        ▼
-                ┌──────────────────────────────────────┐
-                │ Power BI Dashboard                  │
-                │ ─ Conversion Analysis               │
-                │ ─ Engagement Metrics                │
-                │ ─ Sentiment Insights                │
-                └──────────────────────────────────────┘
-                                        │
-                                        ▼
-                          Actionable Business Insights
-                          (Strategy Optimization)
+       ┌────────────────────────────┐
+       │   Raw Data Sources         │
+       │  (Customer, Sales, Reviews,│
+       │   Marketing Campaigns)     │
+       └────────────┬───────────────┘
+                    │
+                [ETL Pipeline]
+           (pipeline/ingestion.py,
+           transformation.py, load.py)
+                    │
+                ▼
+          ┌───────────────────────┐
+          │  Data Warehouse /     │
+          │  Processed Datasets   │
+          │  (data/processed/)    │
+          └──────────┬────────────┘
+                    │
+          [Analysis/Notebook Layer]
+   (notebooks/eda.ipynb, sentiment_analysis.ipynb,
+         feature_engineering.ipynb)
+                   │
+                   ▼
+         ┌─────────────────────────┐
+         │ KPI Calculation, EDA,   │
+         │ Sentiment/NLP Analysis  │
+         └──────────┬──────────────┘
+                   │
+                 [Export]
+                   │
+                ▼
+      ┌────────────────────────────┐
+      │    Visualization/Dashboard │
+      │ (dashboard/shopeasy_dashboard.pbix) │
+      └────────────────────────────┘
+                   │
+                ▼
+    Actionable Business Insights & Recommendations
+
+> Modular pipeline: ETL (pipeline/) → Data (data/) → Analysis (notebooks/) → Visualization (dashboard/) → Decision-Making
 > Structured as a modular analytics pipeline separating ingestion, processing, analysis, and visualization layers.
                           
 ---
@@ -159,36 +168,35 @@ jupyter notebook
 
 marketing-analytics-shopeasy/
 │
-├── data/                     # Raw and processed datasets
-│   ├── raw/
-│   └── processed/
+├── data/                    # Data storage
+│   ├── raw/                 # Original, unprocessed datasets (CSV, XLSX, etc.)
+│   └── processed/           # Cleaned/transformed datasets ready for analysis
 │
-├── sql/                      # SQL scripts for analysis
+├── sql/                     # SQL scripts for initial analysis/extraction
 │   ├── data_cleaning.sql
 │   ├── campaign_analysis.sql
 │   └── customer_segmentation.sql
 │
-├── notebooks/                # Python notebooks (EDA + NLP)
-│   ├── eda.ipynb
-│   ├── sentiment_analysis.ipynb
-│   └── feature_engineering.ipynb
-│
-├── pipeline/                 # ETL pipeline scripts
+├── pipeline/                # ETL scripts for ingestion, transformation & loading
 │   ├── ingestion.py
 │   ├── transformation.py
 │   └── load.py
 │
-├── dashboard/                # Power BI dashboard
+├── notebooks/               # Jupyter notebooks covering analysis & modeling
+│   ├── eda.ipynb                 # Exploratory Data Analysis
+│   ├── sentiment_analysis.ipynb  # NLP & Sentiment Analysis
+│   └── feature_engineering.ipynb # Feature engineering steps
+│
+├── dashboard/               # Power BI and other dashboard files
 │   └── shopeasy_dashboard.pbix
 │
-├── visuals/                  # Charts & screenshots
+├── visuals/                 # Charts, images, and screenshots for documentation
 │   ├── conversion.png
 │   ├── engagement.png
 │   └── sentiment.png
 │
-├── requirements.txt
-└── README.md
-
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
 ---
 
 ## 🔮 Future Enhancements  
